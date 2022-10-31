@@ -1,0 +1,22 @@
+{
+  "name": "phi-color",
+  "version": "1.0.0",
+  "description": "Generate random colors with a given sphere in the HCL color space using the Golden Ratio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stamen/phi-color.git"
+  },
+  "author": "damon@stamen.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stamen/phi-color/issues"
+  },
+  "homepage": "https://github.com/stamen/phi-color#readme",
+  "dependencies": {
+    "chroma-js": "^2.4.2"
+  }
+}
