@@ -15,9 +15,9 @@ $ node examples/random-colors.js
 import phiColor from "../index.js";
 import chroma from "chroma-js";
 
-const origin = chroma("black").hcl();
+const origin = chroma("steelblue").hcl();
 
-const colors = phiColor(origin, 0.2, 10).map((c) => {
+const colors = phiColor(origin, 0.25, 10).map((c) => {
   return c.hex();
 });
 

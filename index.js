@@ -35,6 +35,13 @@ const generatePhiCircle = function* (options) {
   }
 };
 
+/**
+ * Generate `n` colors around an origin within a magnitude of
+ * `m` in HCL color space
+ * @param {chroma.Color} origin - The central color to generate from
+ * @param {float} mag - magnitude to generate colors within
+ * @param {float} n - number of colors to generate
+ */
 const phiColor = (origin, mag, n) => {
   const colors = [];
   const domain = [360, 200, 100];
