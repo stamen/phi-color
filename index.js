@@ -35,22 +35,27 @@ const generatePhiCircle = function* (options) {
   }
 };
 
-const makeColors = (origin, mag, n) => {
+const phiColor = (origin, mag, n) => {
   const colors = [];
-  const scaled = [360, 200, 100].map((s) => {
+  const domain = [360, 200, 100];
+  const scaled = domain.map((s) => {
     return s * mag;
   });
-  for (const c of makePhiCircle()) {
-    colors.push(
-      chroma
-        .hcl(
-          origin.map((o, i) => {
-            return (c[i] - 0.5) * scaled[i] + o;
-          })
-        )
-        .hex()
-    );
-    if (colors.length == 40) break;
+  for (const c of generatePhiCircle()) {
+    const color = origin.map((o, i) => {
+      return (c[i] - 0.5) * scaled[i] + o;
+    });
+    if (
+      color[1] > 0 &&
+      color[1] < domain[1] &&
+      color[2] > 0 &&
+      color[2] < domain[2]
+    ) {
+      colors.push(chroma.hcl(color));
+      if (colors.length == n) break;
+    }
   }
   return colors;
 };
+
+export default phiColor;

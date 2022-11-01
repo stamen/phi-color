@@ -12,6 +12,7 @@
   },
   "author": "damon@stamen.com",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/stamen/phi-color/issues"
   },
