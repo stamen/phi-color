@@ -1,4 +1,4 @@
-import chroma from "chroma-js";
+const chroma = require("chroma-js");
 
 const phi = (d) => {
   let x = 2;
@@ -66,4 +66,4 @@ const phiColor = (origin, magnitude, n) => {
   return colors;
 };
 
-export default phiColor;
+module.exports = phiColor;

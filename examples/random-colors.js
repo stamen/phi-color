@@ -12,8 +12,8 @@ $ node examples/random-colors.js
 #bba079
 */
 
-import phiColor from "../index.js";
-import chroma from "chroma-js";
+const phiColor = require("../index.js");
+const chroma = require("chroma-js");
 
 const origin = chroma("steelblue").hcl();
 
