@@ -11,7 +11,8 @@ const phi = (d) => {
 const generatePhiCircle = function* (options) {
   const d = (options && options.d) || 3;
   const seed = (options && options.seed) || 0.5;
-  const SAFETY = (options && options.SAFETY) || 100;
+  // just a guard for infinite iteration
+  const SAFETY = (options && options.SAFETY) || 1e6;
   const G = phi(d);
   const alpha = [...new Array(d)].map((_, j) => {
     return (1 / G) ** (j + 1) % 1;
