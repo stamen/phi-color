@@ -39,7 +39,7 @@ const generatePhiCircle = function* (options) {
 /**
  * Generate `n` colors around an origin within a magnitude of
  * `m` in HCL color space
- * @param {chroma.Color} origin - The central color to generate from
+ * @param {string} origin - The central color to generate from
  * @param {float} magnitude - magnitude to generate colors within
  * @param {float} n - number of colors to generate
  */
@@ -50,7 +50,7 @@ const phiColor = (origin, magnitude, n) => {
     return s * magnitude;
   });
   for (const c of generatePhiCircle()) {
-    const color = origin.map((o, i) => {
+    const color = chroma(origin).hcl().map((o, i) => {
       return (c[i] - 0.5) * scaled[i] + o;
     });
     if (
@@ -59,7 +59,7 @@ const phiColor = (origin, magnitude, n) => {
       color[2] > 0 &&
       color[2] < domain[2]
     ) {
-      colors.push(chroma.hcl(color));
+      colors.push(chroma.hcl(color).hex());
       if (colors.length == n) break;
     }
   }
