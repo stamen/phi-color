@@ -1,6 +1,6 @@
 {
   "name": "phi-color",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Generate random colors with a given sphere in the HCL color space using the Golden Ratio",
   "main": "phi-color.cjs.js",
   "jsnext:main": "phi-color.es.js",
