@@ -13,13 +13,10 @@ $ node examples/random-colors.js
 */
 
 import phiColor from "../index.js";
-import chroma from "chroma-js";
 
-const origin = chroma("steelblue").hcl();
+const origin = "steelblue";
 
-const colors = phiColor(origin, 0.5, 25).map((c) => {
-  return c.hex();
-});
+const colors = phiColor(origin, 0.5, 25);
 
 // console.log(colors.join("\n"));
 
