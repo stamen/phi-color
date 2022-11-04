@@ -16,3 +16,7 @@ phiColor(origin, magitude, n)
 
 ## examples
 - Return 10 colors as line-delimited hex from a `steelblue` origin: https://github.com/stamen/phi-color/blob/main/examples/random-colors.js
+
+```shell
+npm run random-colors
+```
