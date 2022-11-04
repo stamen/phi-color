@@ -5,6 +5,7 @@
   "main": "phi-color.cjs.js",
   "jsnext:main": "phi-color.es.js",
   "scripts": {
+    "random-colors": "npm run build && node examples/random-colors.js",
     "clean": "rimraf phi-color.cjs.js phi-color.es.js",
     "build": "npm run clean && npm run build:cjs && npm run build:es",
     "build:cjs": "rollup -o phi-color.cjs.js -f cjs -i index.js",

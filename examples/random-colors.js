@@ -12,7 +12,7 @@ $ node examples/random-colors.js
 #bba079
 */
 
-import phiColor from "../index.js";
+const phiColor = require("../phi-color.cjs");
 
 const origin = "steelblue";
 
